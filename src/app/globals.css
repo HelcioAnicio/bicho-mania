@@ -1,26 +1,181 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  /* Brand colours */
+  --color-azul:       #0E76D9;
+  --color-azul-esc:   #0A55A8;
+  --color-azul-prof:  #063463;
+  --color-ceu:        #E8F3FF;
+  --color-ceu-2:      #CFE6FF;
+  --color-tinta:      #0A2138;
+  --color-tinta-mole: #3C5871;
+  --color-sol:        #FFC542;
+  --color-coral:      #FF7E6E;
+  --color-zap:        #25D366;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* Fonts (CSS vars injected by next/font) */
+  --font-fredoka: var(--font-fredoka), sans-serif;
+  --font-nunito:  var(--font-nunito), system-ui, sans-serif;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  /* Shadows */
+  --shadow-azul:  0 24px 60px -22px rgba(10,85,168,.55);
+  --shadow-suave: 0 18px 44px -26px rgba(10,33,56,.45);
+  --shadow-zap:   0 16px 36px -10px rgba(37,211,102,.7);
+  --shadow-heavy: 0 40px 80px -30px rgba(0,0,0,.6);
+
+  /* Easing */
+  --ease-ease:      cubic-bezier(.22,1,.36,1);
+  --ease-ease-back: cubic-bezier(.34,1.56,.64,1);
+
+  /* Border radius */
+  --radius-g: 38px;
+  --radius-m: 26px;
+  --radius-s: 16px;
+
+  /* Animations */
+  --animate-pulse-dot: pulse-dot 2s infinite;
+  --animate-bob:       bob 3s ease-in-out infinite;
+  --animate-wheel:     wheel 1.6s infinite;
+  --animate-marker:    marker .95s cubic-bezier(.22,1,.36,1) .75s forwards;
+  --animate-pawpop:    pawpop .9s cubic-bezier(.22,1,.36,1) forwards;
+
+  /* Keyframes */
+  @keyframes pulse-dot {
+    0%   { box-shadow: 0 0 0 0   rgba(37,211,102,.5); }
+    70%  { box-shadow: 0 0 0 9px rgba(37,211,102,0);  }
+    100% { box-shadow: 0 0 0 0   rgba(37,211,102,0);  }
+  }
+  @keyframes bob {
+    0%,100% { transform: translateY(0);    }
+    50%     { transform: translateY(-7px); }
+  }
+  @keyframes wheel {
+    0%   { opacity:0; transform:translate(-50%,0);    }
+    30%  { opacity:1;                                  }
+    100% { opacity:0; transform:translate(-50%,12px); }
+  }
+  @keyframes marker {
+    to { background-size: 100% 36%; }
+  }
+  @keyframes pawpop {
+    0%   { opacity:.55; transform:translate(-50%,-50%) rotate(var(--rot,0deg)) scale(.4);    }
+    35%  { opacity:.5;                                                                        }
+    100% { opacity:0;   transform:translate(-50%,-50%) rotate(var(--rot,0deg)) scale(1.05); }
   }
 }
 
+/* ── Base ───────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-nunito), system-ui, sans-serif;
+  color: var(--color-tinta);
+  background: #fff;
+  line-height: 1.55;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
+
+h1, h2, h3, h4 {
+  font-family: var(--font-fredoka), sans-serif;
+  font-weight: 600;
+  line-height: 1.02;
+  letter-spacing: -.01em;
+}
+
+img  { display: block; max-width: 100%; }
+a    { color: inherit; text-decoration: none; }
+#root, body > div:first-child { width: 100%; }
+
+/* ── Custom cursor ──────────────────────────────── */
+.cursor-dot {
+  position: fixed; top: 0; left: 0; z-index: 9999; pointer-events: none;
+  transform: translate(-50%,-50%); will-change: transform;
+  width: 9px; height: 9px; border-radius: 50%; background: var(--color-azul);
+}
+.cursor-ring {
+  position: fixed; top: 0; left: 0; z-index: 9999; pointer-events: none;
+  transform: translate(-50%,-50%); will-change: transform;
+  width: 42px; height: 42px; border-radius: 50%;
+  border: 2px solid rgba(14,118,217,.5);
+  transition: width .25s var(--ease-ease), height .25s var(--ease-ease),
+              background .25s, border-color .25s;
+}
+.cursor-ring.hot {
+  width: 64px; height: 64px;
+  background: rgba(14,118,217,.12); border-color: transparent;
+}
+.paw-trail {
+  position: fixed; z-index: 9998; pointer-events: none;
+  width: 22px; height: 22px;
+  transform: translate(-50%,-50%) rotate(var(--rot,0deg));
+  opacity: 0; color: var(--color-azul);
+  animation: var(--animate-pawpop);
+}
+@media (hover:none),(pointer:coarse) {
+  .cursor-dot,.cursor-ring,.paw-trail { display: none !important; }
+}
+
+/* ── Reveal system ──────────────────────────────── */
+.reveal {
+  opacity: 0; transform: translateY(46px);
+  transition: opacity .8s var(--ease-ease), transform .9s var(--ease-ease);
+  transition-delay: calc(var(--stagger, 0) * 90ms);
+}
+.reveal.in { opacity: 1; transform: none; }
+
+.reveal-pop {
+  opacity: 0; transform: translateY(40px) scale(.9) rotate(var(--rot, -4deg));
+  transition: opacity .7s var(--ease-ease), transform .8s var(--ease-ease-back);
+  transition-delay: calc(var(--stagger, 0) * 95ms);
+}
+.reveal-pop.in { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal-pop {
+    opacity: 1 !important; transform: none !important; transition: none !important;
+  }
+}
+
+/* ── Hero marker underline ──────────────────────── */
+.hero-marker {
+  position: relative; display: inline;
+  background-image: linear-gradient(110deg, #FFC542, #FFD66B);
+  background-repeat: no-repeat; background-position: 0 86%; background-size: 0% 36%;
+  -webkit-box-decoration-break: clone; box-decoration-break: clone;
+  padding: 0 4px; border-radius: 6px;
+  animation: var(--animate-marker);
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-marker { background-size: 100% 36%; animation: none; }
+}
+
+/* ── Scroll-hint mouse wheel ────────────────────── */
+.scroll-mouse { position: relative; }
+.scroll-mouse::after {
+  content: ""; position: absolute; left: 50%; top: 7px;
+  width: 4px; height: 7px; border-radius: 3px; background: var(--color-azul-esc);
+  transform: translateX(-50%);
+  animation: var(--animate-wheel);
+}
+
+/* ── Services horizontal track ──────────────────── */
+.svc-track { will-change: transform; }
+@media (max-width: 860px) {
+  .svc-wrap  { height: auto !important; }
+  .svc-sticky { position: static !important; height: auto !important; padding-block: 10px; }
+  .svc-track  { flex-direction: column !important; padding-inline: 0 !important;
+                width: min(92%, 1240px); margin-inline: auto; transform: none !important; }
+  .svc-card   { flex: auto !important; }
+  .svc-progress, .svc-hint { display: none !important; }
+}
+
+/* ── Tour drag-rail ─────────────────────────────── */
+.tour-rail {
+  display: flex; gap: 1.5rem; overflow-x: auto; cursor: grab;
+  padding: 14px clamp(16px,4vw,46px) 30px;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none; scrollbar-width: none;
+}
+.tour-rail::-webkit-scrollbar { display: none; }
