@@ -62,11 +62,11 @@ export default function Hero() {
       <PawIcon data-par="0.05" className="paw-deco absolute text-azul/[.16] pointer-events-none" style={{ left:'7%', top:'24%', width:60 }} />
       <PawIcon data-par="-0.04" className="paw-deco absolute text-azul/[.16] pointer-events-none" style={{ right:'42%', bottom:'14%', width:44 }} />
 
-      <div className="w-[min(92%,1240px)] mx-auto grid grid-cols-1 lg:grid-cols-[1.05fr_.95fr] gap-8 items-center pt-[90px] pb-10 w-full">
+      <div className="w-[min(92%,1240px)] mx-auto grid grid-cols-1 min-[981px]:grid-cols-[1.05fr_.95fr] gap-[40px] min-[981px]:gap-[30px] items-center pt-[90px] pb-10 w-full min-[981px]:text-left text-center">
 
         {/* ── Copy ── */}
         <div>
-          <span className="reveal inline-flex items-center gap-[9px] bg-white border border-[rgba(14,118,217,.14)] text-azul-esc font-extrabold text-[.86rem] px-4 py-2 rounded-full shadow-suave uppercase tracking-[.04em]">
+          <span className="reveal inline-flex items-center gap-[9px] bg-white border border-[rgba(14,118,217,.14)] text-azul-esc font-extrabold text-[.86rem] px-4 py-2 rounded-full shadow-suave uppercase tracking-[.04em] mx-auto min-[981px]:mx-0">
             <span className="w-[9px] h-[9px] rounded-full bg-zap animate-pulse-dot" aria-hidden="true" />
             Em Caxias do Sul · desde 2015
           </span>
@@ -77,23 +77,23 @@ export default function Hero() {
             <span className="hero-marker text-azul">gente da família</span>
           </h1>
 
-          <p className="reveal text-[clamp(1.05rem,1.5vw,1.28rem)] text-tinta-mole max-w-[30em] font-semibold"
+          <p className="reveal text-[clamp(1.05rem,1.5vw,1.28rem)] text-tinta-mole max-w-[30em] font-semibold mx-auto min-[981px]:mx-0"
             style={{ '--stagger': 2 } as React.CSSProperties}>
             Banho &amp; tosa com cromoterapia e musicoterapia, clínica veterinária completa e uma loja pet pra fazer mimo. Tudo num lugar só — pertinho de você, no bairro Lourdes.
           </p>
 
-          <div className="reveal flex flex-wrap gap-[14px] mt-[30px]" style={{ '--stagger': 3 } as React.CSSProperties}>
+          <div className="reveal flex flex-wrap gap-[14px] mt-[30px] justify-center min-[981px]:justify-start" style={{ '--stagger': 3 } as React.CSSProperties}>
             <a href="https://wa.link/9tk1iq" target="_blank" rel="noopener noreferrer"
-              className="inline-flex items-center gap-2.5 font-extrabold font-nunito cursor-pointer rounded-full px-7 py-4 text-[1.05rem] bg-zap text-white shadow-zap transition-transform duration-200 hover:-translate-y-[3px] hover:scale-[1.03]">
+              className="btn-cta inline-flex items-center gap-2.5 font-extrabold font-nunito cursor-pointer rounded-full px-7 py-4 text-[1.05rem] bg-zap text-white shadow-zap transition-transform duration-200 hover:-translate-y-[3px] hover:scale-[1.03]">
               <WaIcon /> Falar no WhatsApp
             </a>
             <a href="#servicos"
-              className="inline-flex items-center gap-2.5 font-extrabold font-nunito cursor-pointer rounded-full px-7 py-4 text-[1.05rem] bg-white text-azul-esc shadow-suave transition-transform duration-200 hover:-translate-y-[3px] hover:scale-[1.03]">
+              className="btn-cta inline-flex items-center gap-2.5 font-extrabold font-nunito cursor-pointer rounded-full px-7 py-4 text-[1.05rem] bg-white text-azul-esc shadow-suave transition-transform duration-200 hover:-translate-y-[3px] hover:scale-[1.03]">
               Conhecer serviços
             </a>
           </div>
 
-          <div className="reveal flex gap-[26px] mt-[34px] flex-wrap" style={{ '--stagger': 4 } as React.CSSProperties}>
+          <div className="hero-meta-wrap reveal flex gap-[26px] mt-[34px] flex-wrap justify-center min-[981px]:justify-start" style={{ '--stagger': 4 } as React.CSSProperties}>
             <div className="flex flex-col">
               <strong className="font-fredoka text-[1.8rem] text-azul-esc leading-none">+400</strong>
               <span className="text-sol text-[1.05rem]" aria-hidden="true">★★★★★</span>

@@ -11,7 +11,7 @@ export default function Vet() {
       className="py-[clamp(70px,11vh,140px)] text-center">
       <div className="w-[min(92%,1240px)] mx-auto">
         <div className="reveal mb-[42px] flex flex-col items-center">
-          <span className="inline-flex items-center gap-2 font-extrabold uppercase tracking-[.14em] text-[.8rem] text-azul">
+          <span className="inline-flex items-center gap-2 font-black uppercase tracking-[.14em] text-[.8rem] text-azul">
             Clínica veterinária
           </span>
           <h2 id="vet-heading" className="text-[clamp(2.1rem,4.4vw,3.4rem)] mt-4 mb-3.5 mx-auto max-w-[16ch]">

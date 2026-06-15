@@ -35,7 +35,7 @@ export default function Familia() {
 
   return (
     <section className="py-[clamp(70px,11vh,140px)]" aria-labelledby="fam-heading">
-      <div className="w-[min(92%,1240px)] mx-auto grid grid-cols-1 md:grid-cols-[.85fr_1.15fr] gap-[54px] items-center">
+      <div className="w-[min(92%,1240px)] mx-auto grid grid-cols-1 min-[861px]:grid-cols-[.85fr_1.15fr] gap-[34px] min-[861px]:gap-[54px] items-center">
         {/* Photo */}
         <div className="reveal-pop relative rounded-g overflow-hidden shadow-azul aspect-square bg-ceu">
           <Image src="/assets/dona.png" alt="Equipe da Bicho Mania com um cãozinho"
@@ -49,11 +49,11 @@ export default function Familia() {
 
         {/* Copy */}
         <div>
-          <span className="reveal inline-flex items-center gap-2 font-extrabold uppercase tracking-[.14em] text-[.8rem] text-azul
+          <span className="reveal inline-flex items-center gap-2 font-black uppercase tracking-[.14em] text-[.8rem] text-azul
             before:content-[''] before:w-[26px] before:h-[3px] before:rounded-full before:bg-azul">
             Gente que ama bicho
           </span>
-          <blockquote className="reveal font-fredoka font-normal text-[clamp(1.5rem,2.5vw,2.1rem)] leading-[1.22] text-tinta mt-4"
+          <blockquote className="reveal font-fredoka font-normal text-[clamp(1.5rem,2.5vw,2.1rem)] leading-[1.22] text-tinta mt-[16px]"
             style={{ '--stagger':1 } as React.CSSProperties}>
             "A gente não cuida de <span className="text-azul">cliente</span>, a gente cuida de{' '}
             <span className="text-azul">família</span> — de quatro patas e de duas."

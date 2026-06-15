@@ -23,9 +23,9 @@ export default function Visita() {
       <div className="absolute w-[420px] h-[420px] -top-[140px] -right-[120px] rounded-full bg-white/[.08] pointer-events-none" aria-hidden="true" />
       <div className="absolute w-[300px] h-[300px] -bottom-[130px] -left-[90px] rounded-full bg-white/[.08] pointer-events-none" aria-hidden="true" />
 
-      <div className="relative w-[min(92%,1240px)] mx-auto grid grid-cols-1 md:grid-cols-2 gap-[46px] items-stretch">
+      <div className="relative w-[min(92%,1240px)] mx-auto grid grid-cols-1 min-[861px]:grid-cols-2 gap-[30px] min-[861px]:gap-[46px] items-stretch">
         <div>
-          <span className="reveal inline-flex items-center gap-2 font-extrabold uppercase tracking-[.14em] text-[.8rem] text-[#BFE0FF]">
+          <span className="reveal inline-flex items-center gap-2 font-black uppercase tracking-[.14em] text-[.8rem] text-[#BFE0FF]">
             Vem pra cá
           </span>
           <h2 id="visita-heading"
@@ -40,11 +40,11 @@ export default function Visita() {
 
           <div className="reveal flex flex-wrap gap-[14px] mt-[30px]" style={{ '--stagger':3 } as React.CSSProperties}>
             <a href="https://wa.link/9tk1iq" target="_blank" rel="noopener noreferrer"
-              className="inline-flex items-center gap-2.5 font-extrabold font-nunito rounded-full px-7 py-4 text-[1.05rem] bg-zap text-white shadow-zap transition-transform duration-200 hover:-translate-y-[3px] hover:scale-[1.03]">
+              className="btn-cta inline-flex items-center gap-2.5 font-extrabold font-nunito rounded-full px-7 py-4 text-[1.05rem] bg-zap text-white shadow-zap transition-transform duration-200 hover:-translate-y-[3px] hover:scale-[1.03]">
               <WaIcon /> (54) 99910-1694
             </a>
             <a href="tel:+555430667350"
-              className="inline-flex items-center gap-2.5 font-extrabold font-nunito rounded-full px-7 py-4 text-[1.05rem] bg-white/[.14] text-white border-2 border-white/50 transition-all duration-200 hover:bg-white/[.24] hover:-translate-y-[3px]">
+              className="btn-cta inline-flex items-center gap-2.5 font-extrabold font-nunito rounded-full px-7 py-4 text-[1.05rem] bg-white/[.14] text-white border-2 border-white/50 transition-all duration-200 hover:bg-white/[.24] hover:-translate-y-[3px]">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5" aria-hidden="true">
                 <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/>
               </svg>

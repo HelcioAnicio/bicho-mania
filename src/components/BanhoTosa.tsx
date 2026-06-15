@@ -16,10 +16,10 @@ export default function BanhoTosa() {
         style={{ background:'radial-gradient(80% 70% at 90% 0%,rgba(14,118,217,.5),transparent 60%)' }}
         aria-hidden="true" />
 
-      <div className="relative w-[min(92%,1240px)] mx-auto grid grid-cols-1 md:grid-cols-2 gap-[54px] items-center">
+      <div className="relative w-[min(92%,1240px)] mx-auto grid grid-cols-1 min-[861px]:grid-cols-2 gap-[34px] min-[861px]:gap-[54px] items-center">
         {/* Copy */}
         <div>
-          <span className="reveal inline-flex items-center gap-2 font-extrabold uppercase tracking-[.14em] text-[.8rem] text-[#7DC0FF]
+          <span className="reveal inline-flex items-center gap-2 font-black uppercase tracking-[.14em] text-[.8rem] text-[#7DC0FF]
             before:content-[''] before:w-[26px] before:h-[3px] before:rounded-full before:bg-[#7DC0FF]">
             O spa do seu pet
           </span>
@@ -66,7 +66,7 @@ export default function BanhoTosa() {
 
           <div className="reveal mt-[30px]" style={{ '--stagger':7 } as React.CSSProperties}>
             <a href="https://wa.link/9tk1iq" target="_blank" rel="noopener noreferrer"
-              className="inline-flex items-center gap-2.5 font-extrabold font-nunito cursor-pointer rounded-full px-7 py-4 text-[1.05rem] bg-zap text-white shadow-zap transition-transform duration-200 hover:-translate-y-[3px] hover:scale-[1.03]">
+              className="btn-cta inline-flex items-center gap-2.5 font-extrabold font-nunito cursor-pointer rounded-full px-7 py-4 text-[1.05rem] bg-zap text-white shadow-zap transition-transform duration-200 hover:-translate-y-[3px] hover:scale-[1.03]">
               Agendar banho agora
             </a>
           </div>

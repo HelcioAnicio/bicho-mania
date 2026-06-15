@@ -40,7 +40,7 @@ export default function Tour() {
       className="py-[clamp(70px,11vh,140px)]"
       style={{ background:'linear-gradient(180deg,#F1F8FF,#fff)' }}>
       <div className="w-[min(92%,1240px)] mx-auto reveal">
-        <span className="inline-flex items-center gap-2 font-extrabold uppercase tracking-[.14em] text-[.8rem] text-azul
+        <span className="inline-flex items-center gap-2 font-black uppercase tracking-[.14em] text-[.8rem] text-azul
           before:content-[''] before:w-[26px] before:h-[3px] before:rounded-full before:bg-azul">
           Dê um passeio
         </span>
@@ -67,7 +67,7 @@ export default function Tour() {
             style={{ '--stagger':i } as React.CSSProperties}>
             <Image src={item.img} alt={item.alt} fill
               sizes="(max-width:768px) 80vw, 30vw" className="object-cover transition-transform duration-700 ease-ease group-hover:scale-[1.07]" loading="lazy" />
-            <figcaption className="absolute left-0 right-0 bottom-0 px-[22px] py-[20px] text-white font-fredoka text-[1.3rem]"
+            <figcaption className="absolute left-0 right-0 bottom-0 px-[22px] pt-[22px] pb-[20px] text-white font-fredoka text-[1.3rem]"
               style={{ background:'linear-gradient(transparent,rgba(6,52,99,.85))' }}>
               <small className="block font-nunito font-extrabold text-[.78rem] opacity-85 uppercase tracking-[.08em]">{item.small}</small>
               {item.cap}

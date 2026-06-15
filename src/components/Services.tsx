@@ -49,7 +49,7 @@ export default function Services() {
         {/* Head */}
         <div className="w-[min(92%,1240px)] mx-auto mb-[30px] reveal">
           <span id="svc-heading"
-            className="inline-flex items-center gap-2 font-extrabold uppercase tracking-[.14em] text-[.8rem] text-azul
+            className="inline-flex items-center gap-2 font-black uppercase tracking-[.14em] text-[.8rem] text-azul
               before:content-[''] before:w-[26px] before:h-[3px] before:rounded-full before:bg-azul">
             Tudo num lugar só
           </span>
@@ -57,10 +57,10 @@ export default function Services() {
             Quatro jeitos de cuidar de quem você ama
           </h2>
           {/* Progress */}
-          <div className="svc-progress h-[5px] bg-ceu-2 rounded-full overflow-hidden mt-4 max-w-xs" aria-hidden="true">
+          <div className="svc-progress h-[5px] bg-ceu-2 rounded-full overflow-hidden mt-[18px]" aria-hidden="true">
             <i ref={barRef} className="block h-full w-0 bg-azul rounded-full transition-none" />
           </div>
-          <p className="svc-hint flex items-center gap-2 text-tinta-mole font-extrabold text-[.82rem] mt-[18px] uppercase tracking-[.06em]" aria-hidden="true">
+          <p className="svc-hint flex justify-center items-center gap-2 text-tinta-mole font-black text-[.82rem] mt-[18px] uppercase tracking-[.06em]" aria-hidden="true">
             role pra baixo, as seções deslizam ◢
           </p>
         </div>
