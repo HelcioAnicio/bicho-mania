@@ -16,7 +16,7 @@ export default function BanhoTosa() {
         style={{ background:'radial-gradient(80% 70% at 90% 0%,rgba(14,118,217,.5),transparent 60%)' }}
         aria-hidden="true" />
 
-      <div className="relative w-[min(92%,1240px)] mx-auto grid grid-cols-1 min-[861px]:grid-cols-2 gap-[34px] min-[861px]:gap-[54px] items-center">
+      <div className="relative w-[min(92%,1536px)] mx-auto grid grid-cols-1 min-[861px]:grid-cols-2 gap-[34px] min-[861px]:gap-[54px] items-center">
         {/* Copy */}
         <div>
           <span className="reveal inline-flex items-center gap-2 font-black uppercase tracking-[.14em] text-[.8rem] text-[#7DC0FF]

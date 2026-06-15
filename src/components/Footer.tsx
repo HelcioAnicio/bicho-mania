@@ -5,7 +5,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-azul-prof text-white pt-14 pb-[30px]" aria-label="Rodapé">
-      <div className="w-[min(92%,1240px)] mx-auto flex flex-wrap gap-[30px] justify-between items-start">
+      <div className="w-[min(92%,1536px)] mx-auto flex flex-wrap gap-[30px] justify-between items-start">
         <div>
           <a href="#topo" aria-label="Bicho Mania — início"
             className="flex items-center gap-[11px] font-fredoka font-semibold text-[1.42rem] text-white">

@@ -35,7 +35,7 @@ export default function Familia() {
 
   return (
     <section className="py-[clamp(70px,11vh,140px)]" aria-labelledby="fam-heading">
-      <div className="w-[min(92%,1240px)] mx-auto grid grid-cols-1 min-[861px]:grid-cols-[.85fr_1.15fr] gap-[34px] min-[861px]:gap-[54px] items-center">
+      <div className="w-[min(92%,1536px)] mx-auto grid grid-cols-1 min-[861px]:grid-cols-[.85fr_1.15fr] gap-[34px] min-[861px]:gap-[54px] items-center">
         {/* Photo */}
         <div className="reveal-pop relative rounded-g overflow-hidden shadow-azul aspect-square bg-ceu">
           <Image src="/assets/dona.png" alt="Equipe da Bicho Mania com um cãozinho"

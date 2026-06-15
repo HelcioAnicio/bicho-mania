@@ -165,7 +165,7 @@ a    { color: inherit; text-decoration: none; }
   .svc-wrap  { height: auto !important; }
   .svc-sticky { position: static !important; height: auto !important; padding-block: 10px; }
   .svc-track  { flex-direction: column !important; padding-inline: 0 !important;
-                width: min(92%, 1240px); margin-inline: auto; transform: none !important; }
+                width: min(92%, 1536px); margin-inline: auto; transform: none !important; }
   .svc-card   { flex: auto !important; }
   .svc-progress, .svc-hint { display: none !important; }
 }

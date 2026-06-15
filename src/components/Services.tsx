@@ -19,7 +19,7 @@ const CARDS = [
 ]
 
 export default function Services() {
-  const wrapRef  = useRef<HTMLDivElement>(null)
+  const wrapRef  = useRef<HTMLElement>(null)
   const trackRef = useRef<HTMLDivElement>(null)
   const barRef   = useRef<HTMLElement>(null)
 
@@ -43,11 +43,11 @@ export default function Services() {
   }, [])
 
   return (
-    <section id="servicos" aria-labelledby="svc-heading"
+    <section ref={wrapRef} id="servicos" aria-labelledby="svc-heading"
       className="relative svc-wrap" style={{ background:'linear-gradient(180deg,#fff,#F1F8FF)', height:'340vh' }}>
       <div className="svc-sticky sticky top-0 h-svh flex flex-col justify-center overflow-hidden">
         {/* Head */}
-        <div className="w-[min(92%,1240px)] mx-auto mb-[30px] reveal">
+        <div className="w-[min(92%,1536px)] mx-auto mb-[30px] reveal">
           <span id="svc-heading"
             className="inline-flex items-center gap-2 font-black uppercase tracking-[.14em] text-[.8rem] text-azul
               before:content-[''] before:w-[26px] before:h-[3px] before:rounded-full before:bg-azul">
@@ -67,7 +67,7 @@ export default function Services() {
 
         {/* Track */}
         <div ref={trackRef} className="svc-track flex gap-[30px]"
-          style={{ paddingInline:'max(4vw, calc((100vw - 1240px)/2 + 4vw))' }}>
+          style={{ paddingInline:'max(4vw, calc((100vw - 1536px)/2 + 4vw))' }}>
           {CARDS.map(c => (
             <article key={c.num}
               className="svc-card flex-[0_0_clamp(310px,42vw,560px)] bg-white rounded-g overflow-hidden shadow-suave border border-[rgba(14,118,217,.14)] flex flex-col transition-all duration-300 hover:shadow-azul hover:-translate-y-1">

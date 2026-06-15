@@ -39,7 +39,7 @@ export default function Tour() {
     <section id="loja" aria-labelledby="tour-heading"
       className="py-[clamp(70px,11vh,140px)]"
       style={{ background:'linear-gradient(180deg,#F1F8FF,#fff)' }}>
-      <div className="w-[min(92%,1240px)] mx-auto reveal">
+      <div className="w-[min(92%,1536px)] mx-auto reveal">
         <span className="inline-flex items-center gap-2 font-black uppercase tracking-[.14em] text-[.8rem] text-azul
           before:content-[''] before:w-[26px] before:h-[3px] before:rounded-full before:bg-azul">
           Dê um passeio
@@ -53,7 +53,7 @@ export default function Tour() {
       </div>
 
       <p className="reveal flex items-center gap-2.5 text-tinta-mole font-extrabold uppercase tracking-[.08em] text-[.8rem]
-        w-[min(92%,1240px)] mx-auto mt-2" aria-hidden="true">
+        w-[min(92%,1536px)] mx-auto mt-2" aria-hidden="true">
         <svg width="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="m9 18-6-6 6-6M15 6l6 6-6 6"/>
         </svg>

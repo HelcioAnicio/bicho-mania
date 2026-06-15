@@ -9,7 +9,7 @@ export default function Vet() {
   return (
     <section id="vet" aria-labelledby="vet-heading"
       className="py-[clamp(70px,11vh,140px)] text-center">
-      <div className="w-[min(92%,1240px)] mx-auto">
+      <div className="w-[min(92%,1536px)] mx-auto">
         <div className="reveal mb-[42px] flex flex-col items-center">
           <span className="inline-flex items-center gap-2 font-black uppercase tracking-[.14em] text-[.8rem] text-azul">
             Clínica veterinária

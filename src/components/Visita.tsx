@@ -23,7 +23,7 @@ export default function Visita() {
       <div className="absolute w-[420px] h-[420px] -top-[140px] -right-[120px] rounded-full bg-white/[.08] pointer-events-none" aria-hidden="true" />
       <div className="absolute w-[300px] h-[300px] -bottom-[130px] -left-[90px] rounded-full bg-white/[.08] pointer-events-none" aria-hidden="true" />
 
-      <div className="relative w-[min(92%,1240px)] mx-auto grid grid-cols-1 min-[861px]:grid-cols-2 gap-[30px] min-[861px]:gap-[46px] items-stretch">
+      <div className="relative w-[min(92%,1536px)] mx-auto grid grid-cols-1 min-[861px]:grid-cols-2 gap-[30px] min-[861px]:gap-[46px] items-stretch">
         <div>
           <span className="reveal inline-flex items-center gap-2 font-black uppercase tracking-[.14em] text-[.8rem] text-[#BFE0FF]">
             Vem pra cá

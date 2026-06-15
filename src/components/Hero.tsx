@@ -62,7 +62,7 @@ export default function Hero() {
       <PawIcon data-par="0.05" className="paw-deco absolute text-azul/[.16] pointer-events-none" style={{ left:'7%', top:'24%', width:60 }} />
       <PawIcon data-par="-0.04" className="paw-deco absolute text-azul/[.16] pointer-events-none" style={{ right:'42%', bottom:'14%', width:44 }} />
 
-      <div className="w-[min(92%,1240px)] mx-auto grid grid-cols-1 min-[981px]:grid-cols-[1.05fr_.95fr] gap-[40px] min-[981px]:gap-[30px] items-center pt-[90px] pb-10 w-full min-[981px]:text-left text-center">
+      <div className="w-[min(92%,1536px)] mx-auto px-4 grid grid-cols-1 min-[981px]:grid-cols-[1.05fr_.95fr] gap-[40px] min-[981px]:gap-[30px] items-center pt-[90px] pb-10 min-[981px]:text-left text-center">
 
         {/* ── Copy ── */}
         <div>
